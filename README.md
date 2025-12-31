@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
@@ -6,7 +5,8 @@
 <title>Happy New Year 2026 - Kz Special</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+/* Import font Pixel hỗ trợ tiếng Việt tốt nhất */
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 :root {
     --pixel-red: #D9754D;
@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'VT323', monospace;
+    font-family: 'DotGothic16', sans-serif; /* Đổi font chính */
     background-color: var(--pixel-bg);
     background-image: radial-gradient(var(--pixel-red) 2px, transparent 2px);
     background-size: 20px 20px;
@@ -42,12 +42,12 @@ body {
 }
 
 #man-nhap-ten { text-align: center; }
-#man-nhap-ten p { font-size: 2.8rem; text-shadow: 4px 4px var(--pixel-dark); margin-bottom: 25px; }
+#man-nhap-ten p { font-size: 2.2rem; text-shadow: 3px 3px var(--pixel-dark); margin-bottom: 25px; color: var(--pixel-yellow); }
 
 input {
-    font-family: 'VT323', monospace;
+    font-family: 'DotGothic16', sans-serif;
     padding: 15px;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     border: 4px solid var(--pixel-dark);
     outline: none;
     text-align: center;
@@ -56,29 +56,30 @@ input {
 }
 
 .pixel-btn {
-    font-family: 'VT323', monospace;
+    font-family: 'DotGothic16', sans-serif;
     background: var(--pixel-yellow);
     color: var(--pixel-dark);
     border: 4px solid var(--pixel-dark);
     box-shadow: 4px 4px 0 0 var(--pixel-dark);
     padding: 10px 25px;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     cursor: pointer;
     transition: 0.1s;
+    font-weight: bold;
 }
 
 .pixel-btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 0; }
 
 #man-noi-dung { display: none; }
 
-.line-to { text-align: left; font-weight: bold; font-size: 2.2rem; margin-bottom: 15px; display: block; width: 100%; color: var(--pixel-red); }
-.line-content { text-align: center; display: block; font-size: 1.9rem; line-height: 1.3; margin: 20px 0; width: 100%; white-space: pre-line; }
-.line-from { text-align: left; font-style: italic; font-size: 1.7rem; margin-top: 15px; display: block; width: 100%; color: #555; }
+.line-to { text-align: left; font-weight: bold; font-size: 1.8rem; margin-bottom: 15px; display: block; width: 100%; color: var(--pixel-red); }
+.line-content { text-align: center; display: block; font-size: 1.4rem; line-height: 1.5; margin: 20px 0; width: 100%; white-space: pre-line; }
+.line-from { text-align: left; font-style: italic; font-size: 1.2rem; margin-top: 15px; display: block; width: 100%; color: #555; }
 
 #nut { display: none; text-align: center; margin-top: 25px; }
 #nut button { margin: 0 10px; }
 
-#bao-loi { color: #fff; background: var(--pixel-red); margin-top: 15px; padding: 10px 20px; font-size: 1.5rem; display: none; border: 2px solid var(--pixel-dark); }
+#bao-loi { color: #fff; background: var(--pixel-red); margin-top: 15px; padding: 10px 20px; font-size: 1.2rem; display: none; border: 2px solid var(--pixel-dark); }
 </style>
 </head>
 
