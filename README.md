@@ -6,7 +6,8 @@
 <title>Happy New Year 2026 - Kz Special</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+/* Font cute, hỗ trợ tiếng Việt 100%, không lỗi dấu */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 :root {
     --pixel-red: #D9754D;
@@ -22,7 +23,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'VT323', monospace;
+    font-family: 'Patrick Hand', cursive;
     background-color: var(--pixel-bg);
     background-image: radial-gradient(var(--pixel-red) 2px, transparent 2px);
     background-size: 20px 20px;
@@ -33,54 +34,77 @@ body {
 .pixel-box {
     background: white;
     border: 4px solid var(--pixel-dark);
-    box-shadow: 4px 4px 0 0 var(--pixel-dark), -4px -4px 0 0 var(--pixel-dark), 4px -4px 0 0 var(--pixel-dark), -4px 4px 0 0 var(--pixel-dark), 8px 8px 0 0 rgba(0,0,0,0.3);
-    padding: 20px;
+    box-shadow: 4px 4px 0 0 var(--pixel-dark), 8px 8px 0 0 rgba(0,0,0,0.3);
+    padding: 25px;
     color: var(--pixel-dark);
-    max-width: 600px;
+    max-width: 500px;
     width: 85%;
     position: relative;
-    max-height: 70vh; /* Giới hạn chiều cao để không đè lên nút */
-    overflow-y: auto; /* Cho phép cuộn nếu nội dung quá dài */
+    max-height: 75vh;
+    overflow-y: auto;
 }
 
-#man-nhap-ten { text-align: center; width: 90%; }
+#man-nhap-ten { text-align: center; }
+#man-nhap-ten p { font-size: 2.2rem; text-shadow: 2px 2px var(--pixel-dark); margin-bottom: 20px; }
 
-/* Style cho PC */
-#man-nhap-ten p { font-size: 2.8rem; text-shadow: 4px 4px var(--pixel-dark); margin-bottom: 25px; color: var(--pixel-yellow); }
-input { font-family: 'VT323', monospace; padding: 15px; font-size: 1.8rem; border: 4px solid var(--pixel-dark); outline: none; text-align: center; width: 280px; max-width: 100%; background: #fff; }
-.pixel-btn { font-family: 'VT323', monospace; background: var(--pixel-yellow); color: var(--pixel-dark); border: 4px solid var(--pixel-dark); box-shadow: 4px 4px 0 0 var(--pixel-dark); padding: 10px 25px; font-size: 1.8rem; cursor: pointer; transition: 0.1s; }
-
-.line-to { text-align: left; font-weight: bold; font-size: 2rem; margin-bottom: 10px; display: block; width: 100%; color: var(--pixel-red); }
-.line-content { text-align: center; display: block; font-size: 1.6rem; line-height: 1.3; margin: 15px 0; width: 100%; white-space: pre-line; }
-.line-from { text-align: left; font-style: italic; font-size: 1.4rem; margin-top: 10px; display: block; width: 100%; color: #555; }
-
-/* FIX CHO ĐIỆN THOẠI */
-@media (max-width: 600px) {
-    #man-nhap-ten p { font-size: 1.8rem; text-shadow: 2px 2px var(--pixel-dark); }
-    input { font-size: 1.2rem; padding: 10px; width: 80%; }
-    .pixel-btn { font-size: 1.2rem; padding: 8px 15px; }
-    
-    .pixel-box { padding: 15px; width: 88%; max-height: 60vh; }
-    .line-to { font-size: 1.4rem; }
-    .line-content { font-size: 1.1rem; line-height: 1.2; }
-    .line-from { font-size: 0.9rem; }
+input {
+    font-family: 'Patrick Hand', cursive;
+    padding: 12px;
+    font-size: 1.4rem;
+    border: 3px solid var(--pixel-dark);
+    outline: none;
+    text-align: center;
+    width: 250px;
+    max-width: 90%;
 }
 
-.pixel-btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 0; }
+.pixel-btn {
+    font-family: 'Patrick Hand', cursive;
+    background: var(--pixel-yellow);
+    color: var(--pixel-dark);
+    border: 3px solid var(--pixel-dark);
+    box-shadow: 4px 4px 0 0 var(--pixel-dark);
+    padding: 8px 20px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.pixel-btn:active { transform: translate(2px, 2px); box-shadow: 0 0 0 0; }
+
+.line-to { font-weight: bold; font-size: 1.8rem; color: var(--pixel-red); margin-bottom: 10px; display: block; }
+.line-content { 
+    text-align: center; 
+    font-size: 1.4rem; 
+    line-height: 1.5; 
+    margin: 15px 0; 
+    display: block; 
+    white-space: pre-line !important; /* Giữ nguyên xuống dòng */
+}
+.line-from { font-style: italic; font-size: 1.2rem; color: #555; display: block; margin-top: 10px; }
+
 #man-noi-dung { display: none; }
-#nut { display: none; text-align: center; margin-top: 25px; }
-#nut button { margin: 5px 10px; }
+#nut { display: none; text-align: center; margin-top: 20px; }
+#nut button { margin: 5px; }
+
 #bao-loi { color: #fff; background: var(--pixel-red); margin-top: 15px; padding: 10px; font-size: 1.2rem; display: none; border: 2px solid var(--pixel-dark); }
+
+@media (max-width: 600px) {
+    #man-nhap-ten p { font-size: 1.8rem; }
+    .line-to { font-size: 1.5rem; }
+    .line-content { font-size: 1.2rem; }
+    .pixel-box { padding: 15px; width: 88%; }
+}
 </style>
 </head>
-
 <body>
 
 <div id="man-nhap-ten">
     <p>NHẬP TÊN CỦA BẠN</p>
-    <input id="o-nhap-ten" type="text" placeholder="Nguyễn Văn Mười...">
+    <input id="o-nhap-ten" type="text" placeholder="Tên bạn là gì nè?">
     <br>
-    <button class="pixel-btn" style="margin-top: 25px;" onclick="batDau()">XÁC NHẬN →</button>
+    <button class="pixel-btn" onclick="batDau()">XÁC NHẬN →</button>
     <div id="bao-loi">TÊN KHÔNG CÓ TRONG DANH SÁCH!</div>
 </div>
 
@@ -91,7 +115,7 @@ input { font-family: 'VT323', monospace; padding: 15px; font-size: 1.8rem; borde
 <div id="nut">
     <button id="nut-prev" class="pixel-btn" onclick="prevTrang()">⟵</button>
     <button id="nut-next" class="pixel-btn" onclick="nextTrang()">⟶</button>
-    <button class="pixel-btn" style="background: #fff;" onclick="quayVe()">⟲</button>
+    <button class="pixel-btn" style="background: white;" onclick="quayVe()">⟲</button>
 </div>
 
 <script>
@@ -99,14 +123,13 @@ let cacTrang = [];
 let index = 0;
 
 const LOI_CHUC = {
-    "phan hải anh": { to: "To: Phan Hải Anh", from: "From: Ka dé (⁠ ˘⁠ ³⁠˘⁠)", content: "Akemashite omedetooooo\nChúc Hải Anh năm mới sẽ có thêm nhiều ngày vui cho riêng mình, luôn giữ được sức khoẻ. Công việc thuận lợi, cuộc sống ổn định và mọi thứ đều tốt đẹp." },
-    "đỗ phương anh": { to: "To: Đỗ Phương Anh", from: "From: Kz", content: "Happy New Year\nNăm mới rồi, mong Phương Anh sẽ dịu dàng hơn với chính mình. Chúc Phương Anh luôn có sức khoẻ, có người để tin tưởng và có điều để hy vọng. cũng mong Phương Anh sẽ hứa những điều này với mình chứ Không phải với tui. Vẫn như cũ, vạn năm nghìn ngày mong lòng người luôn ngập nắng." },
-    "nguyễn kim ngân": { to: "To: Nguyễn Kim Ngân", from: "From: Ka Văn Dé (⁠ ◜⁠‿⁠◝⁠ )⁠♡", content: "Happy New Year\nChúc Ngân năm mới nhiều sức khỏe, nhiều niềm vui và thật nhiều điều tốt lành. Mong là mọi mệt mỏi của năm cũ sẽ ở lại phía sau,hy vọng năm mới Ngân có thể cười nhiều hơn nữa. và Mong là dù là nắng hay mưa thì mỗi ngày vẫn sẽ là ngày vui đối với Ngân." },
-    "phan tiến thịnh": { to: "To: Phan Tiến Thịnh", from: "From: Hoàng Vũ Kiên Giang Vịnh Thái Lán Phú Quốc", content: "Happy New Year!\nChúc chú Hữu năm mới thật nhiều niềm vui và sức khoẻ. Cảm ơn chú vì đã luôn dễ thương và tử tế với cháu trong suốt thời gian qua : 3 Mong năm mới vẫn sẽ được đồng hành, học hỏi thêm nhiều điều từ chú!!, cũng chúc cho chị Vàng và chị Mực có nhiều sức khoẻ ạ." },
-    "nguyễn anh nhật": { to: "To: Nguyễn Anh Nhật", from: "From: Quỷ Nhỏ", content: "Chúc Mừng Năm Mới!\nChúc anh Nhật năm mới thật nhiều sức khỏe và bình an. Mong là những điều anh mong chờ sẽ dần thực hiện được trong năm mới. Và mọi đều tốt đẹp sẽ đến với anh trong năm nay. Cũng cảm ơn anh rất nhiều vì đã giúp đỡ và để em làm phiền trong suốt thời gian qua⊂⁠(⁠(⁠・⁠▽⁠・⁠)⁠)⁠⊃!!" },
-    "nguyễn minh quang": { to: "To: Nguyễn Minh Quang", from: "From: \"con bé Kz\"", content: "Happy New Yearrr\nChúc anh Quang năm mới an khang, Khoẻ mạnh, tinh thần luôn thoải mái và lúc nào cũng giữ được năng lượng tích cực. Mong là năm nay Quang sẽ có nhiều cơ hội trong công việc hơn nữa để lì xì tụi em :))\nHứa năm mới sẽ gọi là \"anh Quang\" nhiều hơn năm cũ để không bị doạ đánh nữa =)))" },
-    "hoàng ngọc dương": { to: "To: Hoàng Ngọc Dương", from: "From: Gà Ủ Muối.", content: "ChÚc MừNg NăM mỚi\nNăm mới chúc anh Dương luôn an yên, khoẻ mạnh, ăn no, ngủ kỹ, làm ăn phát tài, vạn sự đại cát, và vẫn còn dư dả thời gian để em còn làm phiền anh đều đều ạ=)))\nMong là năm mới anh có dịp để ra Sài gòn chơi với tụi em╰⁠(⁠＾⁠3⁠＾⁠)⁠╯!" },
-    "diệu linh": { to: "To: Diệu Linh", from: "From: Kz", content: "Happy New Year!!!\nNăm mới mong Diệu Linh luôn giữ được sức Khoẻ và có những ngày an yên hơn. Chúc Diệu Linh mọi đều tốt đẹp trong thời gian tới." },
+    "phan hải anh": { to: "To: Phan Hải Anh", from: "From Ka dé (⁠ ˘⁠ ³⁠˘⁠)", content: "Akemashite omedetooooo\n\nChúc Hải Anh năm mới sẽ có thêm nhiều ngày vui cho riêng mình, luôn giữ được sức khoẻ. Công việc thuận lợi, cuộc sống ổn định và mọi thứ đều tốt đẹp." },
+    "đỗ phương anh": { to: "To: Đỗ Phương Anh", from: "From: Kz", content: "Happy New Year\n\nNăm mới rồi, mong Phương Anh sẽ dịu dàng hơn với chính mình, không cần phải giỏi hơn ai. chỉ cần ổn hơn hôm qua là đủ. Chúc Phương Anh luôn có sức khoẻ, có người để tin tưởng và có điều để hy vọng. cũng mong Phương Anh sẽ hứa những điều này với mình chứ Không phải với tui. Vẫn như cũ, vạn năm nghìn ngày mong lòng người luôn ngập nắng." },
+    "nguyễn kim ngân": { to: "To: Nguyễn Kim Ngân", from: "From: Ka Văn Dé (⁠ ◜⁠‿⁠◝⁠ )⁠♡", content: "Happy New Year\n\nChúc Ngân năm mới nhiều sức khỏe, nhiều niềm vui và thật nhiều điều tốt lành. Mong là mọi mệt mỏi của năm cũ sẽ ở lại phía sau, mong là năm mới Ngân có thể cười nhiều hơn nữa. Mong là dù là nắng hay mưa thì mỗi ngày vẫn sẽ là ngày vui đối với Ngân." },
+    "hoàng ngọc dương": { to: "To: Hoàng Ngọc Dương", from: "From: Gà Ủ Muối.", content: "ChÚc MừNg NăM mỚi\n\nNăm mới chúc anh Dương luôn an yên, khoẻ mạnh, ăn no, ngủ kỹ, làm ăn phát tài, vạn sự đại cát, và vẫn còn dư dả thời gian để em còn làm phiền anh đều đều ạ=)))\n\nMong là năm mới anh có dịp để ra Sài gòn chơi với tụi em╰⁠(⁠＾⁠3⁠＾⁠)⁠╯!" },
+    "nguyễn minh quang": { to: "To: Nguyễn Minh Quang", from: "From: \"con bé Kz\"", content: "Happy New Yearrr\n\nChúc anh Quang năm mới an khang, Khoẻ mạnh, tinh thần luôn thoải mái và lúc nào cũng giữ được năng lượng tích cực. Mong là năm nay Quang sẽ có nhiều cơ hội trong công việc hơn nữa để lì xì tụi em :))\n\nHứa năm mới sẽ gọi là \"anh Quang\" nhiều hơn năm cũ để không bị doạ đánh nữa =)))" },
+    "nguyễn anh nhật": { to: "To: Nguyễn Anh Nhật", from: "From: Quỷ Nhỏ", content: "Chúc Mừng Năm Mới!\n\nChúc anh Nhật năm mới thật nhiều sức khỏe và bình an. Mong là những điều anh mong chờ sẽ dần thực hiện được trong năm mới. Và mọi đều tốt đẹp sẽ đến với anh trong năm nay. Cũng cảm ơn anh rất nhiều vì đã giúp đỡ và để em làm phiền trong suốt thời gian qua⊂⁠(⁠(⁠・⁠▽⁠・⁠)⁠)⁠⊃!!" },
+    "phan hữu thịnh": { to: "To: Phan Hữu Thịnh", from: "From: Hoàng Vũ Kiên Giang Vịnh Thái Lán Phú Quốc", content: "Happy New Year!\n\nChúc chú Hữu năm mới thật nhiều niềm vui và sức khoẻ. Cảm ơn chú vì đã luôn dễ thương và tử tế với cháu trong suốt thời gian qua : 3 Mong năm mới vẫn sẽ được đồng hành, học hỏi thêm nhiều điều từ chú!!, cũng chúc cho chị Vàng và chị Mực có nhiều sức khoẻ ạ." },
     "hồ nhã khánh quỳnh": { to: "To: Hồ Nhã Khánh Quỳnh", from: "From: Hoàng Châu", content: "Chúc Quỳnh năm mới nhiều sức khỏe, an yên, học giỏi. Mong là năm mới Quỳnh không gặp phải những mối quan hệ khiến Quỳnh phải suy nghĩ nữa. Mong là Quỳnh sẽ càng được thêm nhiều người quý mến trong năm nay. Mong mọi điều tốt đẹp sẽ đến với Quỳnh trong năm nay. (⁠ ◜⁠‿⁠◝⁠ )⁠♡" },
     "nguyễn ngọc bảo trâm": { to: "To: Nguyễn Ngọc Bảo Trâm", from: "From: Hoàng Châu", content: "Chúc Trâm năm mới nhiều sức khỏe. Nhiều niềm vui trong cuộc sống. Mong mọi thứ sẽ thuận buồm xuôi gió, dịu dàng, ấm áp với Trâm. Chúc Trâm có một năm trọn vẹn, bình an. (⁠っ⁠˘⁠з⁠(⁠˘⁠⌣⁠˘⁠ )" },
     "cẩm diệu châu": { to: "To: Cẩm Diệu Châu", from: "From: Hoàng Châu.", content: "Chúc Châu năm mới vui vẻ. Mong năm nay sẽ không có nhiều thứ tiêu cực đến với Châu. Mong Châu có sức khỏe, có bình an và có điều để tin tưởng, có người để dựa vào. Mong Châu hạnh phúc, thành công và vui vẻ. Chúc Châu ngày nào trong năm lòng cũng an yên, cũng tươi đẹp:-P" },
@@ -130,7 +153,7 @@ function batDau() {
         `<span class="line-content">lại gần đây đi!</span>`,
         `<span class="line-content">khịt khịt.... Bro có mùi của....</span>`,
         `<span class="line-content">Một người đã cố gắng hết mình!\nKz rất tự hào về bro!</span>`,
-        `<span class="line-content">Thành tựu lớn nhất năm nay của Kz là gặp được những người bạn mới và những người bạn cũ vẫn còn ở đây với kz.\nnăm mới mong mọi người mọi người đều khoẻ mạnh để có sức quậy cùng kz và cũng mong có thể đồng hành cùng mọi người thật lâu.\nKz quý mọi người lắm ạ(⁠ ◜⁠‿⁠◝⁠ )⁠♡</span>`
+        `<span class="line-content">Thành tựu lớn nhất năm nay của Kz là gặp được những người bạn mới và những người bạn cũ vẫn còn ở đây với kz.\nnăm mới mong mọi người đều khoẻ mạnh để có sức quậy cùng kz.\nKz quý mọi người lắm ạ(⁠ ◜⁠‿⁠◝⁠ )⁠♡</span>`
     ];
     index = 0;
     hienThi();
