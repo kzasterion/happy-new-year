@@ -123,12 +123,12 @@ let index = 0;
 
 const LOI_CHUC = {
     "phan hải anh": { to: "To: Phan Hải Anh", from: "From Ka dé (⁠ ˘⁠ ³⁠˘⁠)", content: "Akemashite omedetooooo\n\nChúc Hải Anh năm mới sẽ có thêm nhiều ngày vui cho riêng mình, luôn giữ được sức khoẻ. Công việc thuận lợi, cuộc sống ổn định và mọi thứ đều tốt đẹp." },
-    "đỗ phương anh": { to: "To: Đỗ Phương Anh", from: "From: Kz", content: "Happy New Year\n\nNăm mới rồi, mong Phương Anh sẽ dịu dàng hơn với chính mình, không cần phải giỏi hơn ai. chỉ cần ổn hơn hôm qua là đủ. Chúc Phương Anh luôn có sức khoẻ, có người để tin tưởng và có điều để hy vọng. cũng mong Phương Anh sẽ hứa những điều này với mình chứ Không phải với tui. Vẫn như cũ, vạn năm nghìn ngày mong lòng người luôn ngập nắng." },
-    "nguyễn kim ngân": { to: "To: Nguyễn Kim Ngân", from: "From: Ka Văn Dé (⁠ ◜⁠‿⁠◝⁠ )⁠♡", content: "Happy New Year\n\nChúc Ngân năm mới nhiều sức khỏe, nhiều niềm vui và thật nhiều điều tốt lành. Mong là mọi mệt mỏi của năm cũ sẽ ở lại phía sau, mong là năm mới Ngân có thể cười nhiều hơn nữa. Mong là dù là nắng hay mưa thì mỗi ngày vẫn sẽ là ngày vui đối với Ngân." },
+    "đỗ phương anh": { to: "To: Đỗ Phương Anh", from: "From: Kz", content: "Happy New Year\n\nNăm mới rồi, mong Phương Anh sẽ dịu dàng hơn với chính mình. Chúc Phương Anh luôn có sức khoẻ, có người để tin tưởng và có điều để hy vọng. cũng mong Phương Anh sẽ hứa những điều này với mình chứ Không phải với tui. Vẫn như cũ, vạn năm nghìn ngày mong lòng người luôn ngập nắng." },
+    "nguyễn kim ngân": { to: "To: Nguyễn Kim Ngân", from: "From: Ka Văn Dé (⁠ ◜⁠‿⁠◝⁠ )⁠♡", content: "Happy New Year\n\nChúc Ngân năm mới nhiều sức khỏe, nhiều niềm vui và thật nhiều điều tốt lành. Mong là mọi mệt mỏi của năm cũ sẽ ở lại phía sau, và hy vọng năm mới Ngân có thể cười nhiều hơn nữa. Mong là dù là nắng hay mưa thì mỗi ngày vẫn sẽ là ngày vui đối với Ngân." },
     "hoàng ngọc dương": { to: "To: Hoàng Ngọc Dương", from: "From: Gà Ủ Muối.", content: "ChÚc MừNg NăM mỚi\n\nNăm mới chúc anh Dương luôn an yên, khoẻ mạnh, ăn no, ngủ kỹ, làm ăn phát tài, vạn sự đại cát, và vẫn còn dư dả thời gian để em còn làm phiền anh đều đều ạ=)))\n\nMong là năm mới anh có dịp để ra Sài gòn chơi với tụi em╰⁠(⁠＾⁠3⁠＾⁠)⁠╯!" },
     "nguyễn minh quang": { to: "To: Nguyễn Minh Quang", from: "From: \"con bé Kz\"", content: "Happy New Yearrr\n\nChúc anh Quang năm mới an khang, Khoẻ mạnh, tinh thần luôn thoải mái và lúc nào cũng giữ được năng lượng tích cực. Mong là năm nay Quang sẽ có nhiều cơ hội trong công việc hơn nữa để lì xì tụi em :))\n\nHứa năm mới sẽ gọi là \"anh Quang\" nhiều hơn năm cũ để không bị doạ đánh nữa =)))" },
     "nguyễn anh nhật": { to: "To: Nguyễn Anh Nhật", from: "From: Quỷ Nhỏ", content: "Chúc Mừng Năm Mới!\n\nChúc anh Nhật năm mới thật nhiều sức khỏe và bình an. Mong là những điều anh mong chờ sẽ dần thực hiện được trong năm mới. Và mọi đều tốt đẹp sẽ đến với anh trong năm nay. Cũng cảm ơn anh rất nhiều vì đã giúp đỡ và để em làm phiền trong suốt thời gian qua⊂⁠(⁠(⁠・⁠▽⁠・⁠)⁠)⁠⊃!!" },
-    "phan hữu thịnh": { to: "To: Phan Hữu Thịnh", from: "From: Hoàng Vũ Kiên Giang Vịnh Thái Lán Phú Quốc", content: "Happy New Year!\n\nChúc chú Hữu năm mới thật nhiều niềm vui và sức khoẻ. Cảm ơn chú vì đã luôn dễ thương và tử tế với cháu trong suốt thời gian qua : 3 Mong năm mới vẫn sẽ được đồng hành, học hỏi thêm nhiều điều từ chú!!, cũng chúc cho chị Vàng và chị Mực có nhiều sức khoẻ ạ." },
+    "phan tiến thịnh": { to: "To: Phan Tiến Thịnh", from: "From: Hoàng Vũ Kiên Giang Vịnh Thái Lán Phú Quốc", content: "Happy New Year!\n\nChúc chú Hữu năm mới thật nhiều niềm vui và sức khoẻ. Cảm ơn chú vì đã luôn dễ thương và tử tế với cháu trong suốt thời gian qua : 3 Mong năm mới vẫn sẽ được đồng hành, học hỏi thêm nhiều điều từ chú!!, cũng chúc cho chị Vàng và chị Mực có nhiều sức khoẻ ạ." },
     "diệu linh": { to: "To: Diệu Linh", from: "From: Kz", content: "Happy New Year!!!\n\nNăm mới mong Diệu Linh luôn giữ được sức Khoẻ và có những ngày an yên hơn. Chúc Diệu Linh mọi đều tốt đẹp trong thời gian tới." },
     "hồ nhã khánh quỳnh": { to: "To: Hồ Nhã Khánh Quỳnh", from: "From: Hoàng Châu", content: "Chúc Quỳnh năm mới nhiều sức khỏe, an yên, học giỏi. Mong là năm mới Quỳnh không gặp phải những mối quan hệ khiến Quỳnh phải suy nghĩ nữa. Mong là Quỳnh sẽ càng được thêm nhiều người quý mến trong năm nay. Mong mọi điều tốt đẹp sẽ đến với Quỳnh trong năm nay. (⁠ ◜⁠‿⁠◝⁠ )⁠♡" },
     "nguyễn ngọc bảo trâm": { to: "To: Nguyễn Ngọc Bảo Trâm", from: "From: Hoàng Châu", content: "Chúc Trâm năm mới nhiều sức khỏe. Nhiều niềm vui trong cuộc sống. Mong mọi thứ sẽ thuận buồm xuôi gió, dịu dàng, ấm áp với Trâm. Chúc Trâm có một năm trọn vẹn, bình an. (⁠っ⁠˘⁠з⁠(⁠˘⁠⌣⁠˘⁠ )" },
@@ -150,7 +150,7 @@ function batDau() {
     const p = LOI_CHUC[ten];
     cacTrang = [
         `<span class="line-to">${p.to}</span><span class="line-content">${p.content}</span><span class="line-from">From: ${p.from || 'Kz'}</span>`,
-        `<span class="line-content">lại gần đây đi!</span>`,
+        `<span class="line-content">hey! lại gần đây đi!</span>`,
         `<span class="line-content">khịt khịt.... Bro có mùi của....</span>`,
         `<span class="line-content">Một người đã cố gắng hết mình!\nKz rất tự hào về bro!</span>`,
         `<span class="line-content">Thành tựu lớn nhất năm nay của Kz là gặp được những người bạn mới và những người bạn cũ vẫn còn ở đây với kz.\nnăm mới mong mọi người đều khoẻ mạnh để có sức quậy cùng kz.\nKz quý mọi người lắm ạ(⁠ ◜⁠‿⁠◝⁠ )⁠♡</span>`
@@ -176,5 +176,4 @@ function quayVe() {
 }
 </script>
 </body>
-</html>
 </html>
