@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
@@ -5,8 +6,7 @@
 <title>Happy New Year 2026 - Kz Special</title>
 
 <style>
-/* Import font Pixel hỗ trợ tiếng Việt tốt nhất */
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 :root {
     --pixel-red: #D9754D;
@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'DotGothic16', sans-serif; /* Đổi font chính */
+    font-family: 'VT323', monospace;
     background-color: var(--pixel-bg);
     background-image: radial-gradient(var(--pixel-red) 2px, transparent 2px);
     background-size: 20px 20px;
@@ -34,52 +34,43 @@ body {
     background: white;
     border: 4px solid var(--pixel-dark);
     box-shadow: 4px 4px 0 0 var(--pixel-dark), -4px -4px 0 0 var(--pixel-dark), 4px -4px 0 0 var(--pixel-dark), -4px 4px 0 0 var(--pixel-dark), 8px 8px 0 0 rgba(0,0,0,0.3);
-    padding: 30px;
+    padding: 20px;
     color: var(--pixel-dark);
-    max-width: 650px;
-    width: 90%;
+    max-width: 600px;
+    width: 85%;
     position: relative;
+    max-height: 70vh; /* Giới hạn chiều cao để không đè lên nút */
+    overflow-y: auto; /* Cho phép cuộn nếu nội dung quá dài */
 }
 
-#man-nhap-ten { text-align: center; }
-#man-nhap-ten p { font-size: 2.2rem; text-shadow: 3px 3px var(--pixel-dark); margin-bottom: 25px; color: var(--pixel-yellow); }
+#man-nhap-ten { text-align: center; width: 90%; }
 
-input {
-    font-family: 'DotGothic16', sans-serif;
-    padding: 15px;
-    font-size: 1.4rem;
-    border: 4px solid var(--pixel-dark);
-    outline: none;
-    text-align: center;
-    width: 300px;
-    background: #fff;
-}
+/* Style cho PC */
+#man-nhap-ten p { font-size: 2.8rem; text-shadow: 4px 4px var(--pixel-dark); margin-bottom: 25px; color: var(--pixel-yellow); }
+input { font-family: 'VT323', monospace; padding: 15px; font-size: 1.8rem; border: 4px solid var(--pixel-dark); outline: none; text-align: center; width: 280px; max-width: 100%; background: #fff; }
+.pixel-btn { font-family: 'VT323', monospace; background: var(--pixel-yellow); color: var(--pixel-dark); border: 4px solid var(--pixel-dark); box-shadow: 4px 4px 0 0 var(--pixel-dark); padding: 10px 25px; font-size: 1.8rem; cursor: pointer; transition: 0.1s; }
 
-.pixel-btn {
-    font-family: 'DotGothic16', sans-serif;
-    background: var(--pixel-yellow);
-    color: var(--pixel-dark);
-    border: 4px solid var(--pixel-dark);
-    box-shadow: 4px 4px 0 0 var(--pixel-dark);
-    padding: 10px 25px;
-    font-size: 1.4rem;
-    cursor: pointer;
-    transition: 0.1s;
-    font-weight: bold;
+.line-to { text-align: left; font-weight: bold; font-size: 2rem; margin-bottom: 10px; display: block; width: 100%; color: var(--pixel-red); }
+.line-content { text-align: center; display: block; font-size: 1.6rem; line-height: 1.3; margin: 15px 0; width: 100%; white-space: pre-line; }
+.line-from { text-align: left; font-style: italic; font-size: 1.4rem; margin-top: 10px; display: block; width: 100%; color: #555; }
+
+/* FIX CHO ĐIỆN THOẠI */
+@media (max-width: 600px) {
+    #man-nhap-ten p { font-size: 1.8rem; text-shadow: 2px 2px var(--pixel-dark); }
+    input { font-size: 1.2rem; padding: 10px; width: 80%; }
+    .pixel-btn { font-size: 1.2rem; padding: 8px 15px; }
+    
+    .pixel-box { padding: 15px; width: 88%; max-height: 60vh; }
+    .line-to { font-size: 1.4rem; }
+    .line-content { font-size: 1.1rem; line-height: 1.2; }
+    .line-from { font-size: 0.9rem; }
 }
 
 .pixel-btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 0; }
-
 #man-noi-dung { display: none; }
-
-.line-to { text-align: left; font-weight: bold; font-size: 1.8rem; margin-bottom: 15px; display: block; width: 100%; color: var(--pixel-red); }
-.line-content { text-align: center; display: block; font-size: 1.4rem; line-height: 1.5; margin: 20px 0; width: 100%; white-space: pre-line; }
-.line-from { text-align: left; font-style: italic; font-size: 1.2rem; margin-top: 15px; display: block; width: 100%; color: #555; }
-
 #nut { display: none; text-align: center; margin-top: 25px; }
-#nut button { margin: 0 10px; }
-
-#bao-loi { color: #fff; background: var(--pixel-red); margin-top: 15px; padding: 10px 20px; font-size: 1.2rem; display: none; border: 2px solid var(--pixel-dark); }
+#nut button { margin: 5px 10px; }
+#bao-loi { color: #fff; background: var(--pixel-red); margin-top: 15px; padding: 10px; font-size: 1.2rem; display: none; border: 2px solid var(--pixel-dark); }
 </style>
 </head>
 
@@ -87,7 +78,7 @@ input {
 
 <div id="man-nhap-ten">
     <p>NHẬP TÊN CỦA BẠN</p>
-    <input id="o-nhap-ten" type="text" placeholder="ví dụ: Nguyễn Văn Mười=))">
+    <input id="o-nhap-ten" type="text" placeholder="Nguyễn Văn Mười...">
     <br>
     <button class="pixel-btn" style="margin-top: 25px;" onclick="batDau()">XÁC NHẬN →</button>
     <div id="bao-loi">TÊN KHÔNG CÓ TRONG DANH SÁCH!</div>
