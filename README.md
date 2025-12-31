@@ -6,7 +6,6 @@
 <title>Happy New Year 2026 - Kz Special</title>
 
 <style>
-/* Font cute, hỗ trợ tiếng Việt 100%, không lỗi dấu */
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 :root {
@@ -80,7 +79,7 @@ input {
     line-height: 1.5; 
     margin: 15px 0; 
     display: block; 
-    white-space: pre-line !important; /* Giữ nguyên xuống dòng */
+    white-space: pre-line !important;
 }
 .line-from { font-style: italic; font-size: 1.2rem; color: #555; display: block; margin-top: 10px; }
 
@@ -130,6 +129,7 @@ const LOI_CHUC = {
     "nguyễn minh quang": { to: "To: Nguyễn Minh Quang", from: "From: \"con bé Kz\"", content: "Happy New Yearrr\n\nChúc anh Quang năm mới an khang, Khoẻ mạnh, tinh thần luôn thoải mái và lúc nào cũng giữ được năng lượng tích cực. Mong là năm nay Quang sẽ có nhiều cơ hội trong công việc hơn nữa để lì xì tụi em :))\n\nHứa năm mới sẽ gọi là \"anh Quang\" nhiều hơn năm cũ để không bị doạ đánh nữa =)))" },
     "nguyễn anh nhật": { to: "To: Nguyễn Anh Nhật", from: "From: Quỷ Nhỏ", content: "Chúc Mừng Năm Mới!\n\nChúc anh Nhật năm mới thật nhiều sức khỏe và bình an. Mong là những điều anh mong chờ sẽ dần thực hiện được trong năm mới. Và mọi đều tốt đẹp sẽ đến với anh trong năm nay. Cũng cảm ơn anh rất nhiều vì đã giúp đỡ và để em làm phiền trong suốt thời gian qua⊂⁠(⁠(⁠・⁠▽⁠・⁠)⁠)⁠⊃!!" },
     "phan hữu thịnh": { to: "To: Phan Hữu Thịnh", from: "From: Hoàng Vũ Kiên Giang Vịnh Thái Lán Phú Quốc", content: "Happy New Year!\n\nChúc chú Hữu năm mới thật nhiều niềm vui và sức khoẻ. Cảm ơn chú vì đã luôn dễ thương và tử tế với cháu trong suốt thời gian qua : 3 Mong năm mới vẫn sẽ được đồng hành, học hỏi thêm nhiều điều từ chú!!, cũng chúc cho chị Vàng và chị Mực có nhiều sức khoẻ ạ." },
+    "diệu linh": { to: "To: Diệu Linh", from: "From: Kz", content: "Happy New Year!!!\n\nNăm mới mong Diệu Linh luôn giữ được sức Khoẻ và có những ngày an yên hơn. Chúc Diệu Linh mọi đều tốt đẹp trong thời gian tới." },
     "hồ nhã khánh quỳnh": { to: "To: Hồ Nhã Khánh Quỳnh", from: "From: Hoàng Châu", content: "Chúc Quỳnh năm mới nhiều sức khỏe, an yên, học giỏi. Mong là năm mới Quỳnh không gặp phải những mối quan hệ khiến Quỳnh phải suy nghĩ nữa. Mong là Quỳnh sẽ càng được thêm nhiều người quý mến trong năm nay. Mong mọi điều tốt đẹp sẽ đến với Quỳnh trong năm nay. (⁠ ◜⁠‿⁠◝⁠ )⁠♡" },
     "nguyễn ngọc bảo trâm": { to: "To: Nguyễn Ngọc Bảo Trâm", from: "From: Hoàng Châu", content: "Chúc Trâm năm mới nhiều sức khỏe. Nhiều niềm vui trong cuộc sống. Mong mọi thứ sẽ thuận buồm xuôi gió, dịu dàng, ấm áp với Trâm. Chúc Trâm có một năm trọn vẹn, bình an. (⁠っ⁠˘⁠з⁠(⁠˘⁠⌣⁠˘⁠ )" },
     "cẩm diệu châu": { to: "To: Cẩm Diệu Châu", from: "From: Hoàng Châu.", content: "Chúc Châu năm mới vui vẻ. Mong năm nay sẽ không có nhiều thứ tiêu cực đến với Châu. Mong Châu có sức khỏe, có bình an và có điều để tin tưởng, có người để dựa vào. Mong Châu hạnh phúc, thành công và vui vẻ. Chúc Châu ngày nào trong năm lòng cũng an yên, cũng tươi đẹp:-P" },
@@ -149,7 +149,7 @@ function batDau() {
 
     const p = LOI_CHUC[ten];
     cacTrang = [
-        `<span class="line-to">${p.to}</span><span class="line-content">${p.content}</span><span class="line-from">${p.from}</span>`,
+        `<span class="line-to">${p.to}</span><span class="line-content">${p.content}</span><span class="line-from">From: ${p.from || 'Kz'}</span>`,
         `<span class="line-content">lại gần đây đi!</span>`,
         `<span class="line-content">khịt khịt.... Bro có mùi của....</span>`,
         `<span class="line-content">Một người đã cố gắng hết mình!\nKz rất tự hào về bro!</span>`,
@@ -176,4 +176,5 @@ function quayVe() {
 }
 </script>
 </body>
+</html>
 </html>
