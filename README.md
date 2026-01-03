@@ -3,8 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy New Year 2026 - Kz Special</title>
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
@@ -101,7 +99,7 @@ input {
 
 <div id="man-nhap-ten">
     <p>NHẬP TÊN CỦA BẠN</p>
-    <input id="o-nhap-ten" type="text" placeholder="Tên bạn là gì nè?">
+    <input id="o-nhap-ten" type="text" placeholder="Ví dụ: Nguyễn Văn Mười">
     <br>
     <button class="pixel-btn" onclick="batDau()">XÁC NHẬN →</button>
     <div id="bao-loi">TÊN KHÔNG CÓ TRONG DANH SÁCH!</div>
@@ -126,14 +124,14 @@ const LOI_CHUC = {
     "đỗ phương anh": { to: "To: Đỗ Phương Anh", from: " Kz", content: "Happy New Year\n\nNăm mới rồi, mong Phương Anh sẽ dịu dàng hơn với chính mình. Chúc Phương Anh luôn có sức khoẻ, có người để tin tưởng và có điều để hy vọng. cũng mong Phương Anh sẽ hứa những điều này với mình chứ Không phải với tui. Vẫn như cũ, vạn năm nghìn ngày mong lòng người luôn ngập nắng." },
     "nguyễn kim ngân": { to: "To: Nguyễn Kim Ngân", from: " Ka Văn Dé (⁠ ◜⁠‿⁠◝⁠ )⁠♡", content: "Happy New Year\n\nChúc Ngân năm mới nhiều sức khỏe, nhiều niềm vui và thật nhiều điều tốt lành. Mong là mọi mệt mỏi của năm cũ sẽ ở lại phía sau, và hy vọng năm mới Ngân có thể cười nhiều hơn nữa. Mong là dù là nắng hay mưa thì mỗi ngày vẫn sẽ là ngày vui đối với Ngân." },
     "hoàng ngọc dương": { to: "To: Hoàng Ngọc Dương", from: "Gà Ủ Muối.", content: "ChÚc MừNg NăM mỚi\n\nNăm mới chúc anh Dương luôn an yên, khoẻ mạnh, ăn no, ngủ kỹ, làm ăn phát tài, vạn sự đại cát, và vẫn còn dư dả thời gian để em còn làm phiền anh đều đều ạ=)))\n\nMong là năm mới anh có dịp để ra Sài gòn chơi với tụi em╰⁠(⁠＾⁠3⁠＾⁠)⁠╯!" },
-    "nguyễn minh quang": { to: "To: Nguyễn Minh Quang", from: " \"con bé Kz\"", content: "Happy New Yearrr\n\nChúc anh Quang năm mới an khang, Khoẻ mạnh, tinh thần luôn thoải mái và lúc nào cũng giữ được năng lượng tích cực. Mong là năm nay Quang sẽ có nhiều cơ hội trong công việc hơn nữa để lì xì tụi em :))\n\nHứa năm mới sẽ gọi là \"anh Quang\" nhiều hơn năm cũ để không bị doạ đánh nữa =)))" },
+    "nguyễn đức minh quang": { to: "To: Nguyễn Đức Minh Quang", from: " \"con bé Kz\"", content: "Happy New Yearrr\n\nChúc anh Quang năm mới an khang, Khoẻ mạnh, tinh thần luôn thoải mái và lúc nào cũng giữ được năng lượng tích cực. Mong là năm nay Quang sẽ có nhiều cơ hội trong công việc hơn nữa để lì xì tụi em :))\n\nHứa năm mới sẽ gọi là \"anh Quang\" nhiều hơn năm cũ để không bị doạ đánh nữa =)))" },
     "nguyễn anh nhật": { to: "To: Nguyễn Anh Nhật", from: "Quỷ Nhỏ", content: "Chúc Mừng Năm Mới!\n\nChúc anh Nhật năm mới thật nhiều sức khỏe và bình an. Mong là những điều anh mong chờ sẽ dần thực hiện được trong năm mới. Và mọi đều tốt đẹp sẽ đến với anh trong năm nay. Cũng cảm ơn anh rất nhiều vì đã giúp đỡ và để em làm phiền trong suốt thời gian qua⊂⁠(⁠(⁠・⁠▽⁠・⁠)⁠)⁠⊃!!" },
     "phan tiến thịnh": { to: "To: Phan Tiến Thịnh", from: "Hoàng Vũ Kiên Giang Vịnh Thái Lán Phú Quốc", content: "Happy New Year!\n\nChúc chú Hữu năm mới thật nhiều niềm vui và sức khoẻ. Cảm ơn chú vì đã luôn dễ thương và tử tế với cháu trong suốt thời gian qua : 3 Mong năm mới vẫn sẽ được đồng hành, học hỏi thêm nhiều điều từ chú!!, cũng chúc cho chị Vàng và chị Mực có nhiều sức khoẻ ạ." },
     "diệu linh": { to: "To: Diệu Linh", from: "Kz", content: "Happy New Year!!!\n\nNăm mới mong Diệu Linh luôn giữ được sức Khoẻ và có những ngày an yên hơn. Chúc Diệu Linh mọi đều tốt đẹp trong thời gian tới." },
     "hồ nhã khánh quỳnh": { to: "To: Hồ Nhã Khánh Quỳnh", from: "Kz", content: "Chúc Quỳnh năm mới nhiều sức khỏe, an yên, học giỏi. Mong là năm mới Quỳnh không gặp phải những mối quan hệ khiến Quỳnh phải suy nghĩ nữa. Mong là Quỳnh sẽ càng được thêm nhiều người quý mến trong năm nay. Mong mọi điều tốt đẹp sẽ đến với Quỳnh trong năm nay. (⁠ ◜⁠‿⁠◝⁠ )⁠♡" },
     "nguyễn ngọc bảo trâm": { to: "To: Nguyễn Ngọc Bảo Trâm", from: "Hoàng Châu", content: "Chúc Trâm năm mới nhiều sức khỏe. Nhiều niềm vui trong cuộc sống. Mong mọi thứ sẽ thuận buồm xuôi gió, dịu dàng, ấm áp với Trâm. Chúc Trâm có một năm trọn vẹn, bình an. (⁠っ⁠˘⁠з⁠(⁠˘⁠⌣⁠˘⁠ )" },
-    "cẩm diệu châu": { to: "To: Cẩm Diệu Châu", from: "Hoàng Châu.", content: "Chúc Châu năm mới vui vẻ. Mong năm nay sẽ không có nhiều thứ tiêu cực đến với Châu. Mong Châu có sức khỏe, có bình an và có điều để tin tưởng, có người để dựa vào. Mong Châu hạnh phúc, thành công và vui vẻ. Chúc Châu ngày nào trong năm lòng cũng an yên, cũng tươi đẹp:-P" },
-    "krusu shirina": { to: "To: Krusu Shirina", from: "Cu Li Chuyện Nghiệp", content: "Chúc Shi năm mới bình an, khoẻ mạnh, Vạn Sự Đại Cát. Mong những ngày của năm nay sẽ nhẹ nhàng với Shi. Chúc cho Shi thành công với những con đường mình đã chọn và luôn có điều để Shi có thể tin tưởng cũng như dựa vào.(⁠ ◜⁠‿⁠◝⁠ )⁠♡" },
+    "cầm diệu châu": { to: "To: Cầm Diệu Châu", from: "Hoàng Châu.", content: "Chúc Châu năm mới vui vẻ. Mong năm nay sẽ không có nhiều thứ tiêu cực đến với Châu. Mong Châu có sức khỏe, có bình an và có điều để tin tưởng, có người để dựa vào. Mong Châu hạnh phúc, thành công và vui vẻ. Chúc Châu ngày nào trong năm lòng cũng an yên, cũng tươi đẹp:-P" },
+    "ksuru shirina": { to: "To: Ksuru Shirina", from: "Cu Li Chuyện Nghiệp", content: "Chúc Shi năm mới bình an, khoẻ mạnh, Vạn Sự Đại Cát. Mong những ngày của năm nay sẽ nhẹ nhàng với Shi. Chúc cho Shi thành công với những con đường mình đã chọn và luôn có điều để Shi có thể tin tưởng cũng như dựa vào.(⁠ ◜⁠‿⁠◝⁠ )⁠♡" },
     "lê thị linh chi": { to: "To: Lê Thị Linh Chi", from: "Kz", content: "Chúc Chi năm mới nhiều niềm vui. Nhiều sức khỏe và mong những ngày mới của năm sẽ nhẹ nhàng với Chi hơn một chút. Chúc Chi luôn bình an, xinh đẹp và hạnh phúc(⁠ ◜⁠‿⁠◝⁠ )⁠♡" }
 };
 
