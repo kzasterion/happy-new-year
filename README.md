@@ -120,8 +120,7 @@ let cacTrang = [];
 let index = 0;
 
 const LOI_CHUC = {
-    "toasty x": { to: "To: Toasty X", from: "Kz",content: "Chúc Tọt Te năm mới nhiều sức khỏe. Bình an và đạt được những điều mình mong mới trong năm nay! Chúc cho Tọt Te thật nhiều sức khỏe để có thể tiếp tục còn đường mình đã chọn! Mong mọi thứ sẽ nhẹ nhàng với Tọt Te hơn trong năm nay và mong mọi điều tốt đẹp sẽ đến với Tọt Te trong thời gian tới!" 
-    },
+    "toasty x": { to: "To: Toasty X", from: "Kz",content: "Chúc Tọt Te năm mới nhiều sức khỏe. Bình an và đạt được những điều mình mong mới trong năm nay! Chúc cho Tọt Te thật nhiều sức khỏe để có thể tiếp tục còn đường mình đã chọn! Mong mọi thứ sẽ nhẹ nhàng với Tọt Te hơn trong năm nay và mong mọi điều tốt đẹp sẽ đến với Tọt Te trong thời gian tới!" },
     "phạm hải anh": { to: "To: Phạm Hải Anh", from: "Ka dé (⁠ ˘⁠ ³⁠˘⁠)", content: "Akemashite omedetooooo\n\nChúc Hải Anh năm mới sẽ có thêm nhiều ngày vui cho riêng mình, luôn giữ được sức khoẻ. Công việc thuận lợi, cuộc sống ổn định và mọi thứ đều tốt đẹp." },
     "đỗ phương anh": { to: "To: Đỗ Phương Anh", from: " Kz", content: "Happy New Year\n\nNăm mới rồi, mong Phương Anh sẽ dịu dàng hơn với chính mình. Chúc Phương Anh luôn có sức khoẻ, có người để tin tưởng và có điều để hy vọng. cũng mong Phương Anh sẽ hứa những điều này với mình chứ Không phải với tui. Vẫn như cũ, vạn năm nghìn ngày mong lòng người luôn ngập nắng." },
     "nguyễn kim ngân": { to: "To: Nguyễn Kim Ngân", from: " Ka Văn Dé (⁠ ◜⁠‿⁠◝⁠ )⁠♡", content: "Happy New Year\n\nChúc Ngân năm mới nhiều sức khỏe, nhiều niềm vui và thật nhiều điều tốt lành. Mong là mọi mệt mỏi của năm cũ sẽ ở lại phía sau, và hy vọng năm mới Ngân có thể cười nhiều hơn nữa. Mong là dù là nắng hay mưa thì mỗi ngày vẫn sẽ là ngày vui đối với Ngân." },
