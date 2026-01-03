@@ -99,7 +99,7 @@ input {
 
 <div id="man-nhap-ten">
     <p>NHẬP TÊN CỦA BẠN</p>
-    <input id="o-nhap-ten" type="text" placeholder="Ví dụ: toastyx">
+    <input id="o-nhap-ten" type="text" placeholder="Ví dụ: Nguyễn Văn Mười">
     <br>
     <button class="pixel-btn" onclick="batDau()">XÁC NHẬN →</button>
     <div id="bao-loi">TÊN KHÔNG CÓ TRONG DANH SÁCH!</div>
@@ -120,13 +120,10 @@ let cacTrang = [];
 let index = 0;
 
 const LOI_CHUC = {
-    "toastyx": { 
-        to: "To: ToastyX", 
-        from: "Kz", 
-        content: "Chúc Tọt Te năm mới nhiều sức khỏe. Bình an và đạt được những điều mình mong mới trong năm nay! Chúc cho Tọt Te thật nhiều sức khỏe để có thể tiếp tục còn đường mình đã chọn! Mong mọi thứ sẽ nhẹ nhàng với Tọt Te hơn trong năm nay và mong mọi điều tốt đẹp sẽ đến với Tọt Te trong thời gian tới!" 
+    "toasty x": { to: "To: Toasty X", from: "Kz",content: "Chúc Tọt Te năm mới nhiều sức khỏe. Bình an và đạt được những điều mình mong mới trong năm nay! Chúc cho Tọt Te thật nhiều sức khỏe để có thể tiếp tục còn đường mình đã chọn! Mong mọi thứ sẽ nhẹ nhàng với Tọt Te hơn trong năm nay và mong mọi điều tốt đẹp sẽ đến với Tọt Te trong thời gian tới!" 
     },
     "phạm hải anh": { to: "To: Phạm Hải Anh", from: "Ka dé (⁠ ˘⁠ ³⁠˘⁠)", content: "Akemashite omedetooooo\n\nChúc Hải Anh năm mới sẽ có thêm nhiều ngày vui cho riêng mình, luôn giữ được sức khoẻ. Công việc thuận lợi, cuộc sống ổn định và mọi thứ đều tốt đẹp." },
-    "đỗ phương anh": { to: "To: Đỗ Phương Anh", from: " Kz", content: "Happy New Year\n\nNăm mới rồi, mong Phương Anh sẽ dịu dàng hơn với chính mình. Chúc Phương Anh luôn có sức khoẻ, có người để tin tưởng và có điều để hy vọng. cũng mong Phương Anh sẽ hứa những điều này với mình chứ Không phải với tui. Vạn năm nghìn ngày mong lòng người luôn ngập nắng." },
+    "đỗ phương anh": { to: "To: Đỗ Phương Anh", from: " Kz", content: "Happy New Year\n\nNăm mới rồi, mong Phương Anh sẽ dịu dàng hơn với chính mình. Chúc Phương Anh luôn có sức khoẻ, có người để tin tưởng và có điều để hy vọng. cũng mong Phương Anh sẽ hứa những điều này với mình chứ Không phải với tui. Vẫn như cũ, vạn năm nghìn ngày mong lòng người luôn ngập nắng." },
     "nguyễn kim ngân": { to: "To: Nguyễn Kim Ngân", from: " Ka Văn Dé (⁠ ◜⁠‿⁠◝⁠ )⁠♡", content: "Happy New Year\n\nChúc Ngân năm mới nhiều sức khỏe, nhiều niềm vui và thật nhiều điều tốt lành. Mong là mọi mệt mỏi của năm cũ sẽ ở lại phía sau, và hy vọng năm mới Ngân có thể cười nhiều hơn nữa. Mong là dù là nắng hay mưa thì mỗi ngày vẫn sẽ là ngày vui đối với Ngân." },
     "hoàng ngọc dương": { to: "To: Hoàng Ngọc Dương", from: "Gà Ủ Muối.", content: "ChÚc MừNg NăM mỚi\n\nNăm mới chúc anh Dương luôn an yên, khoẻ mạnh, ăn no, ngủ kỹ, làm ăn phát tài, vạn sự đại cát, và vẫn còn dư dả thời gian để em còn làm phiền anh đều đều ạ=)))\n\nMong là năm mới anh có dịp để ra Sài gòn chơi với tụi em╰⁠(⁠＾⁠3⁠＾⁠)⁠╯!" },
     "nguyễn đức minh quang": { to: "To: Nguyễn Đức Minh Quang", from: " \"con bé Kz\"", content: "Happy New Yearrr\n\nChúc anh Quang năm mới an khang, Khoẻ mạnh, tinh thần luôn thoải mái và lúc nào cũng giữ được năng lượng tích cực. Mong là năm nay Quang sẽ có nhiều cơ hội trong công việc hơn nữa để lì xì tụi em :))\n\nHứa năm mới sẽ gọi là \"anh Quang\" nhiều hơn năm cũ để không bị doạ đánh nữa =)))" },
@@ -136,44 +133,36 @@ const LOI_CHUC = {
     "hồ nhã khánh quỳnh": { to: "To: Hồ Nhã Khánh Quỳnh", from: "Kz", content: "Chúc Quỳnh năm mới nhiều sức khỏe, an yên, học giỏi. Mong là năm mới Quỳnh không gặp phải những mối quan hệ khiến Quỳnh phải suy nghĩ nữa. Mong là Quỳnh sẽ càng được thêm nhiều người quý mến trong năm nay. Mong mọi điều tốt đẹp sẽ đến với Quỳnh trong năm nay. (⁠ ◜⁠‿⁠◝⁠ )⁠♡" },
     "nguyễn ngọc bảo trâm": { to: "To: Nguyễn Ngọc Bảo Trâm", from: "Hoàng Châu", content: "Chúc Trâm năm mới nhiều sức khỏe. Nhiều niềm vui trong cuộc sống. Mong mọi thứ sẽ thuận buồm xuôi gió, dịu dàng, ấm áp với Trâm. Chúc Trâm có một năm trọn vẹn, bình an. (⁠っ⁠˘⁠з⁠(⁠˘⁠⌣⁠˘⁠ )" },
     "cầm diệu châu": { to: "To: Cầm Diệu Châu", from: "Hoàng Châu.", content: "Chúc Châu năm mới vui vẻ. Mong năm nay sẽ không có nhiều thứ tiêu cực đến với Châu. Mong Châu có sức khỏe, có bình an và có điều để tin tưởng, có người để dựa vào. Mong Châu hạnh phúc, thành công và vui vẻ. Chúc Châu ngày nào trong năm lòng cũng an yên, cũng tươi đẹp:-P" },
-    "ksuru shirina": { to: "To: Ksuru Shirina", from: "Cu Li Chuyện Nghiệp", content: "Chúc Shi năm mới bình an, khoẻ mạnh, Vạn Sự Đại Cát. Mong những ngày của năm nay sẽ nhẹ nhàng with Shi. Chúc cho Shi thành công với những con đường mình đã chọn và luôn có điều để Shi có thể tin tưởng cũng như dựa vào.(⁠ ◜⁠‿⁠◝⁠ )⁠♡" },
+    "ksuru shirina": { to: "To: Ksuru Shirina", from: "Cu Li Chuyện Nghiệp", content: "Chúc Shi năm mới bình an, khoẻ mạnh, Vạn Sự Đại Cát. Mong những ngày của năm nay sẽ nhẹ nhàng với Shi. Chúc cho Shi thành công với những con đường mình đã chọn và luôn có điều để Shi có thể tin tưởng cũng như dựa vào.(⁠ ◜⁠‿⁠◝⁠ )⁠♡" },
     "lê thị linh chi": { to: "To: Lê Thị Linh Chi", from: "Kz", content: "Chúc Chi năm mới nhiều niềm vui. Nhiều sức khỏe và mong những ngày mới của năm sẽ nhẹ nhàng với Chi hơn một chút. Chúc Chi luôn bình an, xinh đẹp và hạnh phúc(⁠ ◜⁠‿⁠◝⁠ )⁠♡" }
 };
 
 function batDau() {
     const ten = document.getElementById("o-nhap-ten").value.trim().toLowerCase();
-    
-    // Kiểm tra xem tên có tồn tại trong LOI_CHUC không
     if (!LOI_CHUC[ten]) {
         document.getElementById("bao-loi").style.display = "block";
         return;
     }
+    document.getElementById("man-nhap-ten").style.display = "none";
+    document.getElementById("man-noi-dung").style.display = "block";
+    document.getElementById("nut").style.display = "block";
 
     const p = LOI_CHUC[ten];
-    
-    // Gán nội dung vào danh sách các trang
     cacTrang = [
-        `<span class="line-to">${p.to}</span><span class="line-content">${p.content}</span><span class="line-from">From: ${p.from}</span>`,
+        `<span class="line-to">${p.to}</span><span class="line-content">${p.content}</span><span class="line-from">From: ${p.from || 'Kz'}</span>`,
         `<span class="line-content">hey! lại gần đây đi!</span>`,
         `<span class="line-content">khịt khịt.... Bro có mùi của....</span>`,
         `<span class="line-content">Một người đã cố gắng hết mình!\nKz rất tự hào về bro!</span>`,
         `<span class="line-content">Thành tựu lớn nhất năm nay của Kz là gặp được những người bạn mới và những người bạn cũ vẫn còn ở đây với kz.\nnăm mới mong mọi người đều khoẻ mạnh để có sức quậy cùng kz.\nKz quý mọi người lắm ạ(⁠ ◜⁠‿⁠◝⁠ )⁠♡</span>`
     ];
-
-    document.getElementById("man-nhap-ten").style.display = "none";
-    document.getElementById("man-noi-dung").style.display = "block";
-    document.getElementById("nut").style.display = "block";
-    
     index = 0;
     hienThi();
 }
 
 function hienThi() {
-    if (cacTrang.length > 0) {
-        document.getElementById("text").innerHTML = cacTrang[index];
-        document.getElementById("nut-prev").style.visibility = index > 0 ? "visible" : "hidden";
-        document.getElementById("nut-next").style.visibility = index < cacTrang.length - 1 ? "visible" : "hidden";
-    }
+    document.getElementById("text").innerHTML = cacTrang[index];
+    document.getElementById("nut-prev").style.visibility = index > 0 ? "visible" : "hidden";
+    document.getElementById("nut-next").style.visibility = index < cacTrang.length - 1 ? "visible" : "hidden";
 }
 
 function nextTrang() { if (index < cacTrang.length - 1) { index++; hienThi(); } }
